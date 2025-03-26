@@ -29,10 +29,12 @@ public partial class MainWindow : Window {
 
         var sparkle = new SparkleUpdater(appcastUrl, null);
 
+
         var updateInfo = await sparkle.CheckForUpdatesQuietly();
         if (updateInfo.Status == NetSparkleUpdater.Enums.UpdateStatus.UpdateAvailable)
         {
             sparkle.ShowUpdateNeededUI(updateInfo.Updates, true);
+
         }
     }
 }

@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBlock Text="Versión 1.0.2 - Actualización exitosa"
+        <TextBlock Text="Versión 1.0.0 - Actualización exitosa"
                    FontSize="18"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"/>

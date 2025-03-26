@@ -7,11 +7,11 @@
         <language>es</language>
         <item>
             <title>Versión 1.0.2</title>
-            <sparkle:version>102</sparkle:version>
+            <sparkle:version>1.0.2</sparkle:version>
             <sparkle:releaseNotesLink>https://jlarapr.github.io/NetSparkleUpdaterApp/release-notes.html</sparkle:releaseNotesLink>
             <pubDate>Wed, 26 Mar 2025 12:00:00 +0000</pubDate>
             <enclosure url="https://jlarapr.github.io/NetSparkleUpdaterApp/NetSparkleUpdaterApp-v1.0.2.zip"
-                       sparkle:version="102"
+                       sparkle:version="1.0.2"
                        length="254302"
                        type="application/zip"/>
         </item>
