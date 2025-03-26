@@ -11,7 +11,7 @@ using System.Windows.Shapes;
 using NetSparkleUpdater;
 using NetSparkleUpdater.AppCastHandlers;
 using NetSparkleUpdater.Downloaders;
-
+using NetSparkleUpdater.SignatureVerifiers;
 
 namespace NetSparkleUpdaterApp;
 
@@ -27,14 +27,16 @@ public partial class MainWindow : Window {
     private async void CheckForUpdates() {
         string appcastUrl = "https://jlarapr.github.io/NetSparkleUpdaterApp/appcast.xml";
 
-        var sparkle = new SparkleUpdater(appcastUrl, null);
-
+        var sparkle = new SparkleUpdater(appcastUrl, null) {
+            UIFactory = new NetSparkleUpdater.UI.WPF.UIFactory(),
+            //SignatureVerifier = new NoSignatureVerifier(); // Or provide a valid
+            LogWriter = new FileLogger("sparkle-log.txt"),
+            SignatureVerifier = new CustomEd25519SignatureVerifier("NetSparkle_Ed25519.pub")
+        };
 
         var updateInfo = await sparkle.CheckForUpdatesQuietly();
-        if (updateInfo.Status == NetSparkleUpdater.Enums.UpdateStatus.UpdateAvailable)
-        {
+        if (updateInfo.Status == NetSparkleUpdater.Enums.UpdateStatus.UpdateAvailable) {
             sparkle.ShowUpdateNeededUI(updateInfo.Updates, true);
-
         }
     }
 }
