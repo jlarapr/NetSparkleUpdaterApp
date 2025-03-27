@@ -12,19 +12,25 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="NetSparkleUpdater.SparkleUpdater" Version="3.0.2" />
-      <PackageReference Include="NetSparkleUpdater.UI.WPF" Version="3.0.2" />
+        <PackageReference Include="NetSparkleUpdater.SparkleUpdater" Version="3.0.2"/>
+        <PackageReference Include="NetSparkleUpdater.UI.WPF" Version="3.0.2"/>
     </ItemGroup>
 
     <ItemGroup>
-      <None Remove="NetSparkle_Ed25519.pub" />
+        <None Remove="NetSparkle_Ed25519.pub"/>
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="bin\" />
-      <Folder Include="publish\" />
+        <Folder Include="publish\"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="docs\NetSparkle_Ed25519.pub"/>
+        <Content Include="docs\NetSparkle_Ed25519.pub">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>NetSparkle_Ed25519.pub</Link>
+        </Content>
     </ItemGroup>
 
   
-
 </Project>
