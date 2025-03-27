@@ -7,8 +7,9 @@
     <item>
       <title>Application 1.0.2</title>
       <pubDate>Wed, 26 Mar 2025 19:48:08 -04:00</pubDate>
-      <sparkle:version>1.0.2</sparkle:version>
-      <sparkle:shortVersionString>1.0.2</sparkle:shortVersionString>
+      <sparkle:version>102</sparkle:version>
+      <sparkle:releaseNotesLink>https://jlarapr.github.io/NetSparkleUpdaterApp/release-notes.html</sparkle:releaseNotesLink>
+      <sparkle:shortVersionString>102</sparkle:shortVersionString>
       <enclosure url="https://jlarapr.github.io/NetSparkleUpdaterApp/NetSparkleUpdaterApp-v1.0.2.zip" sparkle:version="1.0.2" sparkle:shortVersionString="1.0.2" length="827557" sparkle:os="windows" type="application/zip" sparkle:criticalUpdate="false" sparkle:edSignature="ipOKIHFvEkmGlDUc1z7ZlQ9J0f5Hsfeiw3Wh8afw0BKfsvfL3pvV1phqxsd3m9AdAa9nMldZDBvX3znOsGs5Cw==" />
     </item>
   </channel>
