@@ -6,10 +6,10 @@ using NetSparkleUpdater.Enums;
 
 namespace NetSparkleUpdaterApp.BaseClass;
 
-public class CustomEd25519SignatureVerifierBases : ISignatureVerifier {
+public class CustomEd25519SignatureVerifierBase : ISignatureVerifier {
       private readonly byte[] _publicKey;
 
-        public CustomEd25519SignatureVerifierBases(string publicKeyFilePath)
+      protected CustomEd25519SignatureVerifierBase(string publicKeyFilePath)
         {
             if (!File.Exists(publicKeyFilePath))
                 throw new FileNotFoundException("Clave pública no encontrada.", publicKeyFilePath);

@@ -8,7 +8,7 @@ using NetSparkleUpdaterApp.BaseClass;
 
 namespace NetSparkleUpdaterApp
 {
-    public class CustomEd25519SignatureVerifier : CustomEd25519SignatureVerifierBases
+    public class CustomEd25519SignatureVerifier : CustomEd25519SignatureVerifierBase
     {
         public CustomEd25519SignatureVerifier(string publicKeyFilePath) : base(publicKeyFilePath) { }
     }

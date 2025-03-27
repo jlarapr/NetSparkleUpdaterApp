@@ -2,7 +2,7 @@ using NetSparkleUpdater.Interfaces;
 using NetSparkleUpdater.Enums;
 namespace NetSparkleUpdaterApp.BaseClass;
 
-public abstract class NoSignatureVerifierBases : ISignatureVerifier {
+public abstract class NoSignatureVerifierBase : ISignatureVerifier {
     public bool IsSignatureRequired => false;
 
     public SecurityMode SecurityMode { get; set; } = SecurityMode.Unsafe;
