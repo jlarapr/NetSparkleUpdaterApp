@@ -24,14 +24,11 @@
     <ItemGroup>
         <Folder Include="publish\"/>
     </ItemGroup>
-
     <ItemGroup>
         <None Remove="docs\NetSparkle_Ed25519.pub"/>
         <Content Include="docs\NetSparkle_Ed25519.pub">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
             <Link>NetSparkle_Ed25519.pub</Link>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
     </ItemGroup>
-
-  
 </Project>
