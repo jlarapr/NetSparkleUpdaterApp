@@ -12,7 +12,7 @@
             </sparkle:releaseNotesLink>
             <sparkle:shortVersionString>102</sparkle:shortVersionString>
             <enclosure url="https://jlarapr.github.io/NetSparkleUpdaterApp/NetSparkleUpdaterApp-v1.0.2.zip"
-                       sparkle:version="1.0.2" sparkle:shortVersionString="1.0.2" length="827557" sparkle:os="windows"
+                       sparkle:version="1.0.2" sparkle:shortVersionString="1.0.2" length="786986" sparkle:os="windows"
                        type="application/zip" sparkle:criticalUpdate="false"
                        sparkle:edSignature="AdCmWlFOXc1UL6uMkmSe01rWBsf5qeXyKLA61SvGKQlo+caN2cpyT83Npa/YFCgV26MvQEEJmO0DOx0uoUgQCQ=="/>
         </item>
