@@ -8,8 +8,8 @@
 `Get-Item .\NetSparkleUpdaterApp-v1.0.2.zip).Length`
 `netsparkle-generate-appcast --generate-signature NetSparkleUpdaterApp-v1.0.2.zip --key-path .`
 
-`$base64 = Get-Content .\NetSparkle_Ed25519.pub -Raw'
-'[IO.File]::WriteAllBytes("NetSparkle_Ed25519_FIXED.pub", [Convert]::FromBase64String($base64))'
+`$base64 = Get-Content .\NetSparkle_Ed25519.pub -Raw`
+`[IO.File]::WriteAllBytes("NetSparkle_Ed25519_FIXED.pub", [Convert]::FromBase64String($base64))`
 
 
 `netsparkle-generate-appcast --generate-signature appcast.xml --key-path .`
