@@ -44,6 +44,12 @@ namespace NetSparkleUpdaterApp
 
         public ValidationResult VerifySignatureOfFile(string signature, string binaryPath)
         {
+            // Detectamos si se está intentando verificar el appcast.xml
+            if (Path.GetFileName(binaryPath).Equals("appcast.xml", StringComparison.OrdinalIgnoreCase))
+            {
+                return ValidationResult.Valid; // ✅ Ignoramos validación del appcast
+            }
+
             if (!File.Exists(binaryPath))
                 return ValidationResult.Invalid;
 

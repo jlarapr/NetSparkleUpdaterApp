@@ -18,12 +18,10 @@
 
     <ItemGroup>
       <None Remove="NetSparkle_Ed25519.pub" />
-      <Content Include="NetSparkle_Ed25519.pub" >
-          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="bin\" />
       <Folder Include="publish\" />
     </ItemGroup>
 
