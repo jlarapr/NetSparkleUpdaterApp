@@ -33,7 +33,7 @@ public partial class MainWindow : Window {
             //     SignatureVerifier = new NoSignatureVerifier(), // Or provide a valid
             LogWriter = new FileLogger("sparkle-log.txt"),
             SignatureVerifier = new CustomEd25519SignatureVerifier("NetSparkle_Ed25519.pub") {
-                SecurityMode = SecurityMode.Unsafe
+                // SecurityMode = SecurityMode.Unsafe
             }
         };
 

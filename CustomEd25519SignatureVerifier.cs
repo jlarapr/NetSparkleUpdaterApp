@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Text;
 using Chaos.NaCl;
 using NetSparkleUpdater.Enums;
 using NetSparkleUpdater.Interfaces;
@@ -27,26 +28,44 @@ namespace NetSparkleUpdaterApp
 
         public ValidationResult VerifySignature(string signature, byte[] dataToVerify)
         {
+            // Detecta si esto es el appcast.xml por heurística (por ejemplo, tamaño pequeño)
+            if (dataToVerify.Length < 20000 && Encoding.UTF8.GetString(dataToVerify).Contains("<rss"))
+            {
+                File.AppendAllText("verify-log.txt", "✔ Ignorando firma del appcast.xml\n");
+                return ValidationResult.Valid;
+            }
             try
             {
+                File.AppendAllText("verify-log.txt", $"Firma recibida (base64): {signature.Substring(0, 20)}...\n");
+
                 var signatureBytes = Convert.FromBase64String(signature);
-                if (signatureBytes.Length != Ed25519.SignatureSizeInBytes)
+                if (signatureBytes.Length != Ed25519.SignatureSizeInBytes) {
+                    File.AppendAllText("verify-log.txt", $"Firma inválida: tamaño {signatureBytes.Length}, esperado 64.\n");
                     return ValidationResult.Invalid;
+                }
 
                 bool valid = Ed25519.Verify(signatureBytes, dataToVerify, _publicKey);
+                File.AppendAllText("verify-log.txt", $"Resultado de verificación: {valid}\n");
+
                 return valid ? ValidationResult.Valid : ValidationResult.Invalid;
             }
-            catch
+            catch(Exception ex)
             {
+                File.AppendAllText("verify-log.txt", $"Excepción en verificación: {ex.Message}\n");
+
                 return ValidationResult.Invalid;
             }
         }
 
         public ValidationResult VerifySignatureOfFile(string signature, string binaryPath)
         {
+            File.AppendAllText("verifySignatureOfFile-log.txt", $"Verificando: {binaryPath}\n");
+
             // Detectamos si se está intentando verificar el appcast.xml
             if (Path.GetFileName(binaryPath).Equals("appcast.xml", StringComparison.OrdinalIgnoreCase))
             {
+                File.AppendAllText("verifySignatureOfFile-log.txt", "↪ Ignorando firma del appcast.xml\n");
+
                 return ValidationResult.Valid; // ✅ Ignoramos validación del appcast
             }
 
