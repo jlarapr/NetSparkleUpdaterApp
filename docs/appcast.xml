@@ -10,6 +10,7 @@
             <sparkle:version>1.0.2</sparkle:version>
             <sparkle:shortVersionString>1.0.2</sparkle:shortVersionString>
             <sparkle:releaseNotesLink>https://jlarapr.github.io/NetSparkleUpdaterApp/release-notes.html</sparkle:releaseNotesLink>
+
             <enclosure url="https://jlarapr.github.io/NetSparkleUpdaterApp/NetSparkleUpdaterApp-1.0.2.exe"
                        sparkle:version="1.0.2"
                        sparkle:shortVersionString="1.0.2"
