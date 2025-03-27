@@ -30,7 +30,7 @@ public partial class MainWindow : Window {
 
         var sparkle = new SparkleUpdater(appcastUrl, null) {
             UIFactory = new NetSparkleUpdater.UI.WPF.UIFactory(),
-            //     SignatureVerifier = new NoSignatureVerifier(), // Or provide a valid
+                 //SignatureVerifier = new NoSignatureVerifier(), // Or provide a valid
             LogWriter = new FileLogger("sparkle-log.txt"),
             SignatureVerifier = new CustomEd25519SignatureVerifier("NetSparkle_Ed25519.pub") {
                 // SecurityMode = SecurityMode.Unsafe

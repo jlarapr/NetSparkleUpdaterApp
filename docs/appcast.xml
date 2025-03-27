@@ -6,15 +6,18 @@
         <language>en</language>
         <item>
             <title>Application 1.0.2</title>
-            <pubDate>Wed, 26 Mar 2025 19:48:08 -04:00</pubDate>
-            <sparkle:version>102</sparkle:version>
+            <pubDate>Thu, 27 Mar 2025 08:57:13 -04:00</pubDate>
+            <sparkle:version>1.0.2</sparkle:version>
+            <sparkle:shortVersionString>1.0.2</sparkle:shortVersionString>
             <sparkle:releaseNotesLink>https://jlarapr.github.io/NetSparkleUpdaterApp/release-notes.html
-            </sparkle:releaseNotesLink>
-            <sparkle:shortVersionString>102</sparkle:shortVersionString>
-            <enclosure url="https://jlarapr.github.io/NetSparkleUpdaterApp/NetSparkleUpdaterApp-v1.0.2.zip"
-                       sparkle:version="1.0.2" sparkle:shortVersionString="1.0.2" length="786986" sparkle:os="windows"
-                       type="application/zip" sparkle:criticalUpdate="false"
-                       sparkle:edSignature="AdCmWlFOXc1UL6uMkmSe01rWBsf5qeXyKLA61SvGKQlo+caN2cpyT83Npa/YFCgV26MvQEEJmO0DOx0uoUgQCQ=="/>
+            <enclosure url="NetSparkleUpdaterApp-1.0.2.exe"
+                       sparkle:version="1.0.2"
+                       sparkle:shortVersionString="1.0.2"
+                       length="2454822"
+                       sparkle:os="windows"
+                       type="application/x-msdos-program"
+                       sparkle:criticalUpdate="false"
+                       sparkle:edSignature="jpu+fIXJ/ASh+2kRUYtKPPkp3p44iKmszuP8IKjTfj0vtK78rf3AacIDgV7dbn4DEQw+iUSF3tHaBLydVpvkCg=="/>
         </item>
     </channel>
 </rss>
