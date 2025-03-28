@@ -3,7 +3,7 @@ using NetSparkleUpdater.Interfaces;
 
 namespace NetSparkleUpdaterApp.BaseClass;
 
-public class FileLoggerBase : ILogger {
+public abstract class FileLoggerBase : ILogger {
     private readonly  string _filePath;
 
     protected FileLoggerBase(string filePath = "sparkle-log.txt")

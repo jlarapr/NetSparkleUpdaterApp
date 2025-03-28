@@ -6,7 +6,7 @@ using NetSparkleUpdater.Enums;
 
 namespace NetSparkleUpdaterApp.BaseClass;
 
-public class CustomEd25519SignatureVerifierBase : ISignatureVerifier {
+public abstract class CustomEd25519SignatureVerifierBase : ISignatureVerifier {
       private readonly byte[] _publicKey;
 
       protected CustomEd25519SignatureVerifierBase(string publicKeyFilePath)
